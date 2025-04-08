@@ -1,10 +1,12 @@
 import React from 'react';
 
-const WeatherHistory = ({ historyData }) => {
+const WeatherHistory = ({ historyData, isFuture }) => {
   return (
     <div className="card text-white bg-gradient-card shadow-lg rounded-4 border-0 mt-5 p-3 animate-fade">
       <div className="card-body">
-        <h2 className="card-title mb-4 fs-3 fw-bold text-center">📅 5-Day Weather Forecast</h2>
+        <h2 className="card-title mb-4 fs-3 fw-bold ">
+          {isFuture ? '🔮 Next 5 Days Weather Forecast' : '📅 Last 5 Days Weather History'}
+        </h2>
         <div className="table-responsive">
           <table className="table table-hover table-bordered text-white align-middle mb-0 custom-table">
             <thead className="table-light text-dark">
